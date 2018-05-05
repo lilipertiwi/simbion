@@ -1,0 +1,66 @@
+package com.simbion.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class MahasiswaController {
+	
+	@Autowired
+    
+	@RequestMapping("/")
+    public String index ()
+    {
+		return "index";
+    }
+	
+    @RequestMapping("/register")
+    public String add ()
+    {
+        return "register";
+    }
+    
+    @RequestMapping("/skema/tambah")
+    public String daftar_paket ()
+    {
+    	return "daftarskemabeasiswa";
+    }
+    
+    @RequestMapping("/skema/tambah/beasiswa")
+    public String daftar_beasiswa()
+    {
+    	return "beasiswa_aktif";
+    }
+    
+    @RequestMapping("/skema/lihat")
+    public String lihat_beasiswa()
+    {
+    	return "list_beasiswa";
+    }
+    
+    @RequestMapping("/skema/detail")
+    public String detail ()
+    {
+    	return "detail_beasiswa";
+    }
+    
+    @RequestMapping("/info/pembayaran")
+    public String info_bayar()
+    {
+    	return "info_pembayaran";
+    }
+    
+    @RequestMapping("/lihat")
+    public String view ()
+    {
+    	return "viewall";
+    }
+}
